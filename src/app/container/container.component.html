@@ -1,0 +1,33 @@
+<div class="ekart--product--container">
+    <!-- <img [src]="product.pImage">
+    <p>Name: {{ product.name }}</p>
+    <p>Price: {{ '$' + product.price }}</p>
+    <p>Color: {{product.color}}</p>
+    <p>Discounted Price: {{ getDiscountedPrice().toFixed(2) }}</p>
+    <p>{{product.inStock > 0 ? 'Only' + product.inStock +' items left': 'Not in Stock'}}</p>
+    <button (click)="decrementCartValue()">-</button>
+    <span>{{ addToCart }}</span>
+    <button (click)="incrementCartValue()">+</button>
+    <input (input)="onNameChange($event)"><br>
+    <p>name={{name}}</p> -->
+    <app-search></app-search>
+    <product-list #productListComponent></product-list>
+    <product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></product-detail>
+
+    <div class="ekart-featured-products">
+        <div class="ekart-featured-products-heading">
+            <h1>Latest Arrival in Pupolar Brands</h1>
+        </div>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Nike</h3>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Adidas</h3>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Reebook</h3>
+        </featured-brands>    
+    </div>
+</div>
+
+<!--Disabled, Hidden, Checked-->
